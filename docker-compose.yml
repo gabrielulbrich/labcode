@@ -1,0 +1,23 @@
+version: "3"
+services:
+  
+  mysql-lab:
+    build: 
+      context: ./docker/mysql
+    environment:
+      MYSQL_DATABASE: ambienteteste
+      MYSQL_USER: dev_user
+      MYSQL_PASSWORD: dev123
+      MYSQL_ROOT_PASSWORD: dba
+    volumes:
+      - ./docker/mysql/data:/docker-entrypoint-initdb.d:rw
+
+  php-lab:
+    build: 
+      context: ./docker/php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html/:rw
+    depends_on:
+      - mysql-lab
