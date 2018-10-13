@@ -36,4 +36,27 @@ class Welcome extends CI_Controller {
             redirect('/login');
         }
 	}
+
+	public function alterarImg()
+	{
+		$nome							= $this->input->post('nome');
+		$config['upload_path']          = './uploads/';
+		$config['file_name']			= $nome.'.png';
+		$config['allowed_types']        = 'gif|jpg|png';
+		$config['max_size']             = 100;
+		$config['max_width']            = 1024;
+		$config['max_height']           = 768;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('foto'))
+		{
+			echo $this->upload->display_errors();
+		}
+		else
+		{
+			$this->session->set_flashdata('sucess', 'Imagem salva');
+			redirect('/Welcome');
+		}
+	}
 }

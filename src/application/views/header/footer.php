@@ -1,7 +1,6 @@
 
 <!-- /#wrapper -->
 <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
-
 <script src="<?php echo base_url(); ?>vendor/datatables/js/jquery.dataTables.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
@@ -17,22 +16,10 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="<?php echo base_url(); ?>assets/dist/js/sb-admin-2.js"></script>
-
 <script src="<?php echo base_url(); ?>vendor/datatables/js/dataTables.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable( {
-            "processing": true,
-            "serverSide": true,
-            "ajax": "/CadastroCliente/api"
-        } );
-    } );
-
-    $(document).ready(function() {
-        $('#listaform').DataTable();
-    } );
-</script>
+<!-- script local -->
+<script src="<?php echo base_url(); ?>assets/js/script.js"></script>
 
 </body>
 
