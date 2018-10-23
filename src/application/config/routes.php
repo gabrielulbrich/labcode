@@ -54,6 +54,7 @@ $route['Cadastro'] = 'CadastroCliente/index';
 $route['ListaCadastro'] = 'CadastroCliente/listagem';
 $route['form/lista'] = 'Form/listagem';
 $route['form/cadastro'] = 'Form/cadastro';
+$route['perfil'] = 'User/perfil';
 $route['register'] = 'user/register';
 $route['login'] = 'user/login';
 $route['logout'] = 'user/logout';

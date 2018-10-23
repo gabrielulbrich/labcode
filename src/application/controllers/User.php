@@ -20,7 +20,6 @@ class User extends CI_Controller {
 		$this->load->library(array('session'));
 		$this->load->helper(array('url'));
 		$this->load->model('user_model');
-		
 	}
 	
 	
@@ -87,6 +86,48 @@ class User extends CI_Controller {
 		}
 		
 	}
+
+	public function perfil()
+	{
+		if ($this->session->userdata ('logged_in') === true)
+		{
+				$this->load->view('header/header');
+				$this->load->view('index');
+				$this->load->view('/user/profile/perfil');
+				$this->load->view('header/footer');
+		}else{
+				redirect('/login');
+		}
+	}
+
+	public function editUser()
+    {
+			$data['nome']								= time().'.png';
+			$config['upload_path']      = './assets/uploads/';
+			$config['file_name']				= $data['nome'];
+			$config['allowed_types']    = 'gif|jpg|png';
+			$config['max_size']         = 100;
+			$config['max_width']        = 1024;
+			$config['max_height']       = 768;
+			$data['user']								= $this->session->username;
+	
+			$this->load->library('upload', $config);
+	
+			if (!$this->upload->do_upload('foto'))
+			{
+				echo $this->upload->display_errors();
+			}
+			else if ($this->user_model->editPerfil($data)) 
+			{
+				$this->session->avatar = $data['nome'];
+				$this->session->set_flashdata('sucess', 'Imagem salva');
+				redirect('/perfil');
+			}
+			else{
+				$this->session->set_flashdata('error', 'Erro');
+			}
+		}		
+    
 		
 	/**
 	 * login function.
@@ -102,7 +143,7 @@ class User extends CI_Controller {
 		// load form helper and validation library
 		$this->load->helper('form');
 		$this->load->library('form_validation');
-        $this->load->library('session');
+    $this->load->library('session');
 		
 		// set validation rules
 		$this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric');
@@ -133,7 +174,8 @@ class User extends CI_Controller {
                 $this->session->set_userdata('username', (string)$user->username);
                 $this->session->set_userdata('logged_in', (bool)true);
                 $this->session->set_userdata('is_confirmed', (bool)$user->is_confirmed);
-                $this->session->set_userdata('is_admin', (bool)$user->is_admin);
+								$this->session->set_userdata('is_admin', (bool)$user->is_admin);
+								$this->session->set_userdata('avatar', (string)$user->avatar);
 
 				$data->sucess = 'Parabens';
 				// user login ok

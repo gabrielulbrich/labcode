@@ -103,9 +103,19 @@ class User_model extends CI_Model {
 	 * @return bool
 	 */
 	private function verify_password_hash($password, $hash) {
-		
 		return password_verify($password, $hash);
-		
+	}
+
+	public function editPerfil($data)
+	{
+		if(is_null($data))
+		{
+				return false;
+		}
+		$this->db->set('avatar', $data['nome']);
+		$this->db->where('username', $data['user']);
+		$this->db->update('users');
+		return $this->db->affected_rows();
 	}
 	
 }

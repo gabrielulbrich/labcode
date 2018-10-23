@@ -62,7 +62,7 @@ CREATE TABLE `cliente` (
   `cidade` varchar(100) NOT NULL DEFAULT '',
   `estado` varchar(100) NOT NULL DEFAULT '',
   `cep` varchar(15) NOT NULL DEFAULT '',
-  `avatar` varchar(255) DEFAULT 'default.jpg',
+  `avatar` varchar(255) DEFAULT 'default.png',
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   `is_deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -99,7 +99,7 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL DEFAULT '',
   `email` varchar(255) NOT NULL DEFAULT '',
   `password` varchar(255) NOT NULL DEFAULT '',
-  `avatar` varchar(255) DEFAULT 'default.jpg',
+  `avatar` varchar(255) DEFAULT 'default.png',
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   `is_admin` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -109,7 +109,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `avatar`, `created_at`, `updated_at`, `is_admin`, `is_confirmed`, `is_deleted`) VALUES
-(1,	'Gabriel',	'gabriel.ulbrich@mirumagency.com',	'$2y$10$WDgXumP4FGJIDCX8pHbReOT760bzkPey0rI19uOZY9Bl1T7ntp4Q6',	'default.jpg',	'2018-09-27 20:04:42',	NULL,	0,	0,	0);
+(1,	'Gabriel',	'gabriel.ulbrich@mirumagency.com',	'$2y$10$WDgXumP4FGJIDCX8pHbReOT760bzkPey0rI19uOZY9Bl1T7ntp4Q6',	'default.png',	'2018-09-27 20:04:42',	NULL,	0,	0,	0);
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
