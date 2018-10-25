@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Bem vindo <?php echo $_SESSION['username']; ?></a>
+            <a class="navbar-brand" href="/">Bem vindo <?php echo $this->session->username; ?></a>
         </div>
 
         <!-- /.navbar-header -->
@@ -245,7 +245,7 @@
                         <a href="/Welcome"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-table fa-fw"></i> Formulario<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-table fa-fw"></i> Formulario<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="/form/lista">Listagem</a>
