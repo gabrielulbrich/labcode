@@ -38,7 +38,7 @@ class CadastroCliente extends CI_Controller
         $this->form_validation->set_rules('sexo', 'Sexo', 'trim|required');
         $this->form_validation->set_rules('cpf', 'CPF', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[users.email]');
-        $this->form_validation->set_rules('endereco', 'Endereco', 'trim|required');
+        $this->form_validation->set_rules('rua', 'Endereco', 'trim|required');
         $this->form_validation->set_rules('numero', 'Numero', 'trim|required');
         $this->form_validation->set_rules('cidade', 'Cidade', 'trim|required');
         $this->form_validation->set_rules('estado', 'Estado', 'trim|required');
@@ -57,7 +57,7 @@ class CadastroCliente extends CI_Controller
                 'sexo' => $this->input->post('sexo'),
                 'cpf' => $this->input->post('cpf'),
                 'email' => $this->input->post('email'),
-                'endereco' => $this->input->post('endereco'),
+                'endereco' => $this->input->post('rua'),
                 'numero'    => $this->input->post('numero'),
                 'cidade' => $this->input->post('cidade'),
                 'estado' => $this->input->post('estado'),
@@ -82,6 +82,14 @@ class CadastroCliente extends CI_Controller
         }else{
             redirect('/login');
         }
+    }
+
+    public function consulta()
+    {
+        $cep = $this->input->post('cep');
+        //echo $cep;
+        $this->load->library('curl');
+        echo $this->curl->consulta($cep);   
     }
 
     public function api()
