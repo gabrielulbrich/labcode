@@ -30,7 +30,7 @@ class Welcome extends CI_Controller {
         {
             $this->load->view('header/header');
             $this->load->view('index');
-            $this->load->view('conteudo_dashboard');
+            $this->load->view('/home/conteudo_dashboard');
             $this->load->view('header/footer');
         }else{
             redirect('/login');

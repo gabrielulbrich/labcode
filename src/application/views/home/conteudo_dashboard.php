@@ -26,7 +26,6 @@
 			</div><!-- .container -->
 		    <?php endif; ?>
 
-
         </div>
         <!-- /.col-lg-12 -->
     </div>

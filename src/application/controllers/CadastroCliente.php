@@ -22,7 +22,7 @@ class CadastroCliente extends CI_Controller
         {
             $this->load->view('header/header');
             $this->load->view('index');
-            $this->load->view('conteudo_cadastrocliente');
+            $this->load->view('cliente/conteudo_cadastrocliente');
             $this->load->view('header/footer');
         }else{
             redirect('/login');
@@ -77,7 +77,7 @@ class CadastroCliente extends CI_Controller
         {
             $this->load->view('header/header');
             $this->load->view('index');
-            $this->load->view('conteudo_cadastroclientelista');
+            $this->load->view('cliente/conteudo_cadastroclientelista');
             $this->load->view('header/footer');
         }else{
             redirect('/login');

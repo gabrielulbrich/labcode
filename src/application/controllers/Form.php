@@ -22,7 +22,7 @@ class Form extends CI_Controller
         {
             $this->load->view('header/header');
             $this->load->view('index');
-            $this->load->view('conteudo_formcadastro');
+            $this->load->view('form/conteudo_formcadastro');
             $this->load->view('header/footer');
         }else{
             redirect('/login');
@@ -36,7 +36,7 @@ class Form extends CI_Controller
             $result['dados'] = $this->Form_model->selecionar();
             $this->load->view('header/header');
             $this->load->view('index');
-            $this->parser->parse('conteudo_formlista', $result);
+            $this->parser->parse('form/conteudo_formlista', $result);
             $this->load->view('header/footer');
         }else{
             redirect('/login');
@@ -54,7 +54,7 @@ class Form extends CI_Controller
         $result['editar'] = $this->Form_model->getById($id);
         $this->load->view('header/header');
         $this->load->view('index');
-        $this->parser->parse('conteudo_formeditar', $result);
+        $this->parser->parse('form/conteudo_formeditar', $result);
         $this->load->view('header/footer');
     }
 
