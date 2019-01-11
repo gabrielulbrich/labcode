@@ -12,7 +12,7 @@
   </script>
 </head>
 <body>
-  <nav class="menu">
+  <nav class="menu js-menu">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
@@ -20,7 +20,7 @@
       <li><a href="https://www.origamid.com/">Dev →</a></li>
     </ul>
   </nav>
-  <section class="grid-section animais" id="animais">
+  <section class="grid-section animais js-scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
     <ul class="animais-lista js-tabmenu">
       <li>
@@ -101,9 +101,9 @@
     </div>
   </section>
 
-  <section class="grid-section faq" id="faq">
+  <section class="grid-section faq js-scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista">
+    <dl class="faq-lista js-accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
       <dt>Eles são fantásticos?</dt>
@@ -115,7 +115,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato" id="contato">
+  <section class="grid-section contato js-scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="assets/img/mapa.png">
