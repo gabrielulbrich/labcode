@@ -10,22 +10,18 @@
     <meta name="author" content="">
 
     <title>Cadastro</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    <!-- MetisMenu CSS -->
-    <link href="<?php echo base_url(); ?>vendor/metisMenu/metisMenu.min.css" rel="stylesheet" type="text/css">
+        <!-- Bootstrap core CSS-->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="<?php echo base_url(); ?>assets/dist/css/sb-admin-2.css" rel="stylesheet">
+        <!-- Custom fonts for this template-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Morris Charts CSS -->
-    <link href="<?php echo base_url(); ?>vendor/morrisjs/morris.css" rel="stylesheet">
+        <!-- Page level plugin CSS-->
+        <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <link href="<?php echo base_url(); ?>vendor/datatables/css/dataTables.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom styles for this template-->
+        <link href="assets/css/sb-admin.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,4 +36,4 @@
 
 </head>
 
-<body>
+<body id="page-top">

@@ -28,10 +28,10 @@ class Welcome extends CI_Controller {
 
         if ($this->session->userdata ('logged_in') === true)
         {
-            $this->load->view('header/header');
-            $this->load->view('index');
-            $this->load->view('/home/conteudo_dashboard');
-            $this->load->view('header/footer');
+            //$this->load->view('header/header');
+            $this->load->view('index.php');
+            //$this->load->view('/home/conteudo_dashboard');
+            //$this->load->view('header/footer');
         }else{
             redirect('/login');
         }
