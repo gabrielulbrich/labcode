@@ -1,9 +1,9 @@
-
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Cadastro de Cliente</h1>
-
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Cliente</a>
+            </li>
+            <li class="breadcrumb-item active">Cadastrar</li>
+        </ol>
 
             <?php
             $csrf = array(
@@ -38,7 +38,7 @@
                 </div>
             <?php endif; ?>
 
-                <div class="container">
+        <div class="container">
                     <div class="row">
                         <h3>Pessoal</h3><hr>
                         <div class="form-group col-md-6 offset-md-4">
@@ -124,10 +124,7 @@
                 </div>
             <?php echo form_close();?>
         </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
-</div>
+
 
 
 

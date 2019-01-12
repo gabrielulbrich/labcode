@@ -1,9 +1,10 @@
 
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Formulário</h1>
-
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Formulário</a>
+            </li>
+            <li class="breadcrumb-item active">Editar</li>
+        </ol>
 
             <?php
             $csrf = array(
@@ -46,10 +47,6 @@
             </form>
             {/editar}
 
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
-</div>
+
 
 

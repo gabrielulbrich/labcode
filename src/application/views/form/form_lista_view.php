@@ -1,16 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: gulbrich
- * Date: 10/1/18
- * Time: 4:35 PM
- */
-?>
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Formulário</h1>
-
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Formulário</a>
+            </li>
+            <li class="breadcrumb-item active">Listar</li>
+        </ol>
             <?php
             $erro = $this->session->userdata('error');
             $sucess = $this->session->userdata('sucess');
@@ -60,8 +53,5 @@
                             {/dados}
                     </tbody>
                 </table>
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-</div>
+
 
