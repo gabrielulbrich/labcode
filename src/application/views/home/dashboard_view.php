@@ -1,7 +1,10 @@
-<div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Conteúdo</h1>
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Overview</li>
+          </ol>
 
             <!-- <?php //$sucess = $this->session->userdata('sucess'); ?>
 
@@ -33,11 +36,6 @@
                 </div>
                 </div>
 
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
-</div>
 
 
 

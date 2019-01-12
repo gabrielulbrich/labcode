@@ -18,12 +18,10 @@ class Form extends CI_Controller
 
     public function cadastro()
     {
+        $data['pagina'] = 'form/form_cadastrar_view.php';
         if ($this->session->userdata ('logged_in') === true)
         {
-            $this->load->view('header/header');
-            $this->load->view('index');
-            $this->load->view('form/conteudo_formcadastro');
-            $this->load->view('header/footer');
+            $this->load->view('index', $data);
         }else{
             redirect('/login');
         }
@@ -31,13 +29,11 @@ class Form extends CI_Controller
 
     public function listagem()
     {
+        $data['pagina'] = 'form/form_lista_view.php';
         if ($this->session->userdata ('logged_in') === true)
         {
-            $result['dados'] = $this->Form_model->selecionar();
-            $this->load->view('header/header');
-            $this->load->view('index');
-            $this->parser->parse('form/conteudo_formlista', $result);
-            $this->load->view('header/footer');
+            $data['dados'] = $this->Form_model->selecionar();
+            $this->load->view('index', $data);
         }else{
             redirect('/login');
         }
@@ -50,12 +46,9 @@ class Form extends CI_Controller
         $id = $this->uri->segment(3);
         if(is_null($id))
             redirect('/form/lista');
-
-        $result['editar'] = $this->Form_model->getById($id);
-        $this->load->view('header/header');
-        $this->load->view('index');
-        $this->parser->parse('form/conteudo_formeditar', $result);
-        $this->load->view('header/footer');
+        $data['pagina'] = 'form/form_editar_view.php';
+        $data['editar'] = $this->Form_model->getById($id);
+        $this->load->view('index',$data);
     }
 
     public function inserir()

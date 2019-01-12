@@ -12,16 +12,16 @@
     <title>Cadastro</title>
 
         <!-- Bootstrap core CSS-->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom fonts for this template-->
-        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
         <!-- Page level plugin CSS-->
-        <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
         <!-- Custom styles for this template-->
-        <link href="assets/css/sb-admin.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>assets/css/sb-admin.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

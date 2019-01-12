@@ -17,13 +17,10 @@ class CadastroCliente extends CI_Controller
 
     public function index()
     {
-
+        $data['pagina'] = 'cliente/cliente_cadastrar_view.php';
         if ($this->session->userdata ('logged_in') === true)
         {
-            $this->load->view('header/header');
-            $this->load->view('index');
-            $this->load->view('cliente/conteudo_cadastrocliente');
-            $this->load->view('header/footer');
+            $this->load->view('index',$data);
         }else{
             redirect('/login');
         }
@@ -73,12 +70,10 @@ class CadastroCliente extends CI_Controller
 
     public function listagem()
     {
+        $data['pagina'] = 'cliente/cliente_listar_view.php';
         if ($this->session->userdata ('logged_in') === true)
         {
-            $this->load->view('header/header');
-            $this->load->view('index');
-            $this->load->view('cliente/conteudo_cadastroclientelista');
-            $this->load->view('header/footer');
+            $this->load->view('index',$data);
         }else{
             redirect('/login');
         }

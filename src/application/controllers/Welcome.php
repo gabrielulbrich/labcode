@@ -25,13 +25,11 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+		$data['pagina'] = 'home/dashboard_view.php';
 
         if ($this->session->userdata ('logged_in') === true)
         {
-            //$this->load->view('header/header');
-            $this->load->view('index.php');
-            //$this->load->view('/home/conteudo_dashboard');
-            //$this->load->view('header/footer');
+            $this->load->view('index.php', $data);
         }else{
             redirect('/login');
         }
