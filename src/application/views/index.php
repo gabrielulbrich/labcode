@@ -52,10 +52,11 @@
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">Settings</a>
-            <a class="dropdown-item" href="#">Activity Log</a>
+            <a class="dropdown-item" href="#"><img src="<?php echo base_url()?>assets/uploads/<?php echo $this->session->avatar ?>" alt="..." class="img-circle center-block"></a>
+            <a class="dropdown-item" href="/perfil">Perfil</a>
+            <a class="dropdown-item" href="#">Configurações</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">Sair</a>
           </div>
         </li>
       </ul>
