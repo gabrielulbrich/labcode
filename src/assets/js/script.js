@@ -6,10 +6,6 @@ $(document).ready(function() {
     } );
 } );
 
-$(document).ready(function() {
-    $('#listaform').DataTable();
-} );
-
 $(function(){
     $('#uploadimg').change(function(){
     const file = $(this)[0].files[0]

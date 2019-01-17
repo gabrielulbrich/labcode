@@ -47,7 +47,7 @@ class Form extends CI_Controller
         if(is_null($id))
             redirect('/form/lista');
         $data['pagina'] = 'form/form_editar_view.php';
-        $data['editar'] = $this->Form_model->getById($id);
+        $data['dados'] = $this->Form_model->getById($id);
         $this->load->view('index',$data);
     }
 

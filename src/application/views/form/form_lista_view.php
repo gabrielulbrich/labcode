@@ -22,13 +22,14 @@
                 </div>
             <?php endif; ?>
 
-                <table id="listaform" class="display" style="width:100%">
+                <table id="dataTable" class="table table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>E-mail</th>
-                            <th>Excluir Editar</th>
+                            <th>Excluir</th>
+                            <th>Editar</th>
 
                         </tr>
                     </thead>
@@ -36,21 +37,26 @@
                         <?php  if (count($dados) == 0): ?>
                             <tr><td colspan="2">Nenhum contato encontrado</td></tr>
                         <?php endif ?>
-                            {dados}
+                            <?php foreach($dados as $dado) {?>
                                 <tr>
-                                    <td>{idform}</td>
-                                    <td>{nome}</td>
-                                    <td>{email}</td>
-                                    <td><button onclick="location.href='/Form/excluir/{idform}/'" type="button" class="btn btn-danger" aria-label="Left Align">
-                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                        </button>
-
-                                    <button onclick="location.href='/Form/editar/{idform}/'" type="button" class="btn btn-primary" aria-label="Left Align">
-                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                        </button>
+                                    <td class=".col-md-1"><?= $dado->idform ?></td>
+                                    <td><?= $dado->nome ?></td>
+                                    <td><?= $dado->email ?></td>
+                                    <td><a href="/Form/excluir/<?php echo $dado->idform ?>/">
+                                            <button type="button" class="btn btn-danger" aria-label="Left Align">
+                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            </button>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="/Form/editar/<?php echo $dado->idform ?>/">
+                                            <button type="button" class="btn btn-primary" aria-label="Left Align">
+                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                            </button>
+                                        </a>
                                     </td>
                                 </tr>
-                            {/dados}
+                            <?php } ?>
                     </tbody>
                 </table>
 
