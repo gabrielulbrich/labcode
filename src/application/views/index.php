@@ -109,14 +109,10 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link" href="/quartos">
             <i class="fas fa-fw fa-folder"></i>
-            <span>UI</span>
+            <span>Quartos</span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="/">Listar</a>
-            <a class="dropdown-item" href="/">Cadastrar</a>
-          </div>
         </li>
       </ul>
 

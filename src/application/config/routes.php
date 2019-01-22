@@ -54,6 +54,7 @@ $route['cliente/cadastro'] = 'CadastroCliente/index';
 $route['cliente/lista'] = 'CadastroCliente/listagem';
 $route['form/lista'] = 'Form/listagem';
 $route['form/cadastro'] = 'Form/cadastro';
+$route['quartos'] = 'Quartos/index';
 $route['animais-fantasticos'] = 'AnimaisFantasticos/index';
 $route['perfil'] = 'User/perfil';
 $route['register'] = 'user/register';

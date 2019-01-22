@@ -45,7 +45,7 @@ class CadastroCliente extends CI_Controller
         {
             $erros = array('msg' => validation_errors());
             $this->session->set_flashdata('error', $erros);
-            redirect('/Cadastro');
+            redirect('/cliente/cadastro');
         }
         else
         {
@@ -64,7 +64,7 @@ class CadastroCliente extends CI_Controller
             $this->cadastrocliente_model->cadastrar($data);
 
             $this->session->set_flashdata('sucess', 'Cliente Cadastrado.');
-            redirect('/Cadastro');
+            redirect('/cliente/cadastro');
         }
     }
 
@@ -90,6 +90,7 @@ class CadastroCliente extends CI_Controller
     public function api()
     {
         $result = $this->cadastrocliente_model->selecionar();
+        //print_r($result);
         $itens = array();
         if(!empty($result)):
             foreach($result as $row):
@@ -113,6 +114,5 @@ class CadastroCliente extends CI_Controller
         );
 
         echo json_encode($result);
-
     }
  }
