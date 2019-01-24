@@ -41,28 +41,7 @@
 <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
 
   <script>
-	$(function(){
-                $("#btn_consulta").click(function(){
-                    var cep = $('#cep').val();
-                    if (cep == '') {
-                        alert('Informe o CEP antes de continuar');
-                        $('#cep').focus();
-                        return false;
-                    }
-                    $('#btn_consulta').html ('Aguarde...');
-                    $.post('/CadastroCliente/consulta/'+cep,
-                    {
-                        cep : cep
-                    }, 
-                    function(dados){
-                        $('#rua').val(dados.logradouro);
-                        $('#bairro').val(dados.bairro);
-                        $('#cidade').val(dados.localidade);
-                        $('#estado').val(dados.uf);
-                        $('#btn_consulta').html('Consultar');
-                    }, 'json');
-                });
-            });                     
+	                
   </script>
 
 </body>

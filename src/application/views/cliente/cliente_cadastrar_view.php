@@ -70,12 +70,12 @@
                 <div class="input-group">
                 <div class="form-check-inline">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optradio"><label class="col-form-label-sm">Masculino</label>
+                        <input type="radio" class="form-check-input" name="sexo"><label class="col-form-label-sm">Masculino</label>
                     </label>
                     </div>
                     <div class="form-check-inline">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optradio"><label class="col-form-label-sm">Feminino</label>
+                        <input type="radio" class="form-check-input" name="sexo"><label class="col-form-label-sm">Feminino</label>
                     </label>
                     </div>
                 </div>
@@ -114,13 +114,9 @@
                 </div>
             </div>
         </div>
-
         <div class="form-group col-md-6 offset-md-4">
             <a id="btn_consulta" class="btn btn-success">Consultar</a>
         </div>
-
-
-
         <div class="form-group row align-items-center">
             <label for="office" class="col-4 col-form-label-sm text-right">Endereço:</label>
             <div class="col-8">
