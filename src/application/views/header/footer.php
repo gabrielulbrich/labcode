@@ -50,7 +50,7 @@
                         return false;
                     }
                     $('#btn_consulta').html ('Aguarde...');
-                    $.post('/CadastroCliente/consulta',
+                    $.post('/CadastroCliente/consulta/'+cep,
                     {
                         cep : cep
                     }, 

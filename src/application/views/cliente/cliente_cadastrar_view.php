@@ -50,7 +50,7 @@
             <label for="firstName" class="col-4 col-form-label-sm text-right">Nome Completo:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="firstName" name="nome" type="text" class="form-control form-control-sm" readonly>
+                    <input id="firstName" name="nome" type="text" class="form-control form-control-sm">
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
             <label for="lastName" class="col-4 col-form-label-sm text-right">CPF:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="lastName" name="cpf" type="text" class="form-control form-control-sm" readonly>
+                    <input id="lastName" name="cpf" type="text" class="form-control form-control-sm">
                 </div>
             </div>
         </div>
@@ -110,15 +110,22 @@
             <label for="emailAddress" class="col-4 col-form-label-sm text-right">CEP:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="emailAddress" name="cep" type="email" class="form-control form-control-sm extendable">
+                    <input  id="cep" name="cep" type="text" class="form-control form-control-sm extendable">
                 </div>
             </div>
         </div>
+
+        <div class="form-group col-md-6 offset-md-4">
+            <a id="btn_consulta" class="btn btn-success">Consultar</a>
+        </div>
+
+
+
         <div class="form-group row align-items-center">
             <label for="office" class="col-4 col-form-label-sm text-right">Endereço:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="office" name="rua" type="number" class="form-control form-control-sm" readonly>
+                    <input name="rua" id="rua" type="text" class="form-control form-control-sm">
                 </div>
             </div>
         </div>
@@ -126,7 +133,7 @@
             <label for="cell" class="col-4 col-form-label-sm text-right">Número:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="cell" name="numero" type="number" class="form-control form-control-sm" readonly>
+                    <input name="numero" id="numero" type="text" class="form-control form-control-sm">
                 </div>
             </div>
         </div>
@@ -134,7 +141,7 @@
             <label for="emailAddress" class="col-4 col-form-label-sm text-right">Bairro:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="emailAddress" name="email" type="email" class="form-control form-control-sm extendable">
+                    <input name="bairro" id="bairro" type="text" class="form-control form-control-sm extendable">
                 </div>
             </div>
         </div>
@@ -142,7 +149,7 @@
             <label for="emailAddress" class="col-4 col-form-label-sm text-right">Cidade:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="emailAddress" name="cidade" type="email" class="form-control form-control-sm extendable">
+                    <input name="cidade" id="cidade" type="text" class="form-control form-control-sm extendable">
                 </div>
             </div>
         </div>
@@ -150,9 +157,13 @@
             <label for="emailAddress" class="col-4 col-form-label-sm text-right">Estado:</label>
             <div class="col-8">
                 <div class="input-group">
-                    <input id="emailAddress" name="estado" type="email" class="form-control form-control-sm extendable">
+                    <input name="estado" id="estado" type="text" class="form-control form-control-sm extendable">
                 </div>
             </div>
+        </div>
+
+        <div class="form-group">
+			<input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">
         </div>
     </div>
 </div>

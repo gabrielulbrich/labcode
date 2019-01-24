@@ -79,10 +79,11 @@ class CadastroCliente extends CI_Controller
         }
     }
 
-    public function consulta()
+    public function consulta($cep)
     {
-        $cep = $this->input->post('cep');
+        //$cep = $this->input->post('cep');
         //echo $cep;
+        //die($cep);
         $this->load->library('curl');
         echo $this->curl->consulta($cep);   
     }
