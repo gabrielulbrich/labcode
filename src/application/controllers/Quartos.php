@@ -33,5 +33,12 @@ class Quartos extends CI_Controller {
         }else{
             redirect('/login');
         }
-  }
+	}
+
+	public function novoQuarto(){
+		echo 'test';
+		return 1;
+	}
+	  
+
 }
