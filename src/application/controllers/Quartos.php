@@ -36,8 +36,8 @@ class Quartos extends CI_Controller {
 	}
 
 	public function novoQuarto(){
-		echo 'test';
-		return 1;
+		$this->load->model('Quartos_model');
+		$data['dados'] = $this->Quartos_model->criarQuarto();
 	}
 	  
 
