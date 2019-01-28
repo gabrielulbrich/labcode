@@ -20,12 +20,14 @@
     </tr>
   </thead>
   <tbody>
+  <?php foreach($quartos as $q) { ?>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
+      <th><?php echo $q->idquarto ?></th>
+      <td><?php echo $q->nome ?></td>
       <td></td>
       <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Info</button></td>
     </tr>
+  <?php } ?>
   </tbody>
 </table>
 

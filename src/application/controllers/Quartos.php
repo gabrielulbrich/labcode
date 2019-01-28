@@ -20,12 +20,14 @@ class Quartos extends CI_Controller {
 	 */
   public function __construct() {
     parent::__construct ();
-    $this->load->library ('session');
+	$this->load->library ('session');
+	$this->load->model('Quartos_model');
   }
 
 	public function index()
 	{
 		$data['pagina'] = 'quartos/quartos_view.php';
+		$data['quartos'] = $this->Quartos_model->selecionar();
 
         if ($this->session->userdata ('logged_in') === true)
         {
@@ -36,8 +38,8 @@ class Quartos extends CI_Controller {
 	}
 
 	public function novoQuarto(){
-		$this->load->model('Quartos_model');
 		$data['dados'] = $this->Quartos_model->criarQuarto();
+		redirect('/quartos');
 	}
 	  
 

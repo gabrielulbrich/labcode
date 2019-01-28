@@ -14,15 +14,32 @@ class Quartos_model extends CI_Model
 
     public function criarQuarto()
     {
-        if(!$this->db->insert('form', $data))
+      $query = $this->db->select_max('idquarto')
+               ->from('quartos')
+               ->get()
+               ->result();
+
+      // print_r();
+      // //echo ['idquarto'];
+      //die();
+
+      $data = array(
+        'nome' => 'Quarto '.$query[0]->idquarto,
+        'limpeza' => 0,
+        'ocupado' => 0,
+        'is_deleted' => 0,
+      );
+
+      if(!$this->db->insert('quartos', $data))
             throw new Exception($this->db->_error_message());
     }
-    public  function selecionar(){
-        $this->db->select();
-        $this->db->from('form');
-        $this->db->where('is_deleted', 0);
-        $query = $this->db->get();
+    public function selecionar(){
+        $query = $this->db->select()
+                 ->from('quartos')
+                 ->where('is_deleted', 0)
+                 ->get()
+                 ->result();
 
-        return $query->result();
+        return $query;
     }
 }

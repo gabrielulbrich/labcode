@@ -44,9 +44,10 @@ $(function(){
 
 $(function(){
     $("#addQuarto").click(function(){
-        $.post('/Quartos/novoQuarto')
+        $.get('/quartos/novoQuarto')
         console.log('test');
     });
+    
 });
 
 $(document).ready(function() {
