@@ -22,6 +22,7 @@ class Quartos extends CI_Controller {
     parent::__construct ();
 	$this->load->library ('session');
 	$this->load->model('Quartos_model');
+	$this->load->helper('url');
   }
 
 	public function index()
@@ -37,10 +38,34 @@ class Quartos extends CI_Controller {
         }
 	}
 
-	public function novoQuarto(){
+	public function novoQuarto()
+	{
 		$data['dados'] = $this->Quartos_model->criarQuarto();
 		redirect('/quartos');
 	}
-	  
 
+	public function popular_modal()
+	{
+		$cod_lista = $this->input->post('cod_item');
+		$item = $this->Quartos_model->getById($cod_lista);
+		if ($item) {
+			$data = array(
+				'status' 	 => true,
+				'quarto' 	 => $item[0]->nome,
+				'idquarto' => $item[0]->idquarto
+			);
+			echo json_encode($data);
+		}
+	}
+
+	public function excluirQuarto($idquarto, $nomequarto)
+	{
+		$quarto = $nomequarto;
+		if($this->Quartos_model->excluirQuarto($idquarto))
+		{
+			$this->session->set_flashdata('sucess', $quarto.' excluido');					
+		}else{
+			$this->session->set_flashdata('error', 'Não foi possível excluir o quarto.');
+		}
+	} 
 }

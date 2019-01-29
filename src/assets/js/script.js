@@ -41,15 +41,6 @@ $(function(){
     });
 });
 
-
-$(function(){
-    $("#addQuarto").click(function(){
-        $.get('/quartos/novoQuarto')
-        console.log('test');
-    });
-    
-});
-
 $(document).ready(function() {
     $('#summernote').summernote({
         height: 200,
