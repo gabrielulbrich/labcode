@@ -8,10 +8,6 @@
 
 class Quartos_model extends CI_Model
 {
-    // public $nome;
-    // public $senha;
-    // public $email;
-
     public function criarQuarto()
     {
       $query = $this->db->select_max('idquarto')

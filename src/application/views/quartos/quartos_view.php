@@ -69,7 +69,7 @@
         </form>
       </div>
       <div class="modal-footer">        
-        <button type="button" class="btn btn-primary" onclick="$('#formulario_modal').submit()">Alterar</button>
+        <button type="button" class="btn btn-primary" onclick="editarQuarto()" data-dismiss="modal">Alterar</button>
         <button type="button" class="btn btn-danger" onclick="excluirQuarto()" data-dismiss="modal">Excluir</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
       </div>
@@ -107,11 +107,19 @@ function excluirQuarto()
   var nomequarto = $('#nomeQuarto').val();
   console.log(nomequarto);
 
-  $.post('/Quartos/excluirQuarto/'+idquarto+'/'+nomequarto,
-        {
-          idquarto : idquarto,
-          nomequarto : nomequarto
-        });
-  location.reload();
+  $.post('/Quartos/excluirQuarto/'+idquarto+'/'+nomequarto).done(function() {
+    location.reload();
+  })
+}
+
+function editarQuarto()
+{
+  var idquarto = $('#idQuarto').val();
+  var nomequarto = $('#nomeQuarto').val();
+  console.log(nomequarto);
+
+  $.post('/Quartos/excluirQuarto/'+idquarto+'/'+nomequarto).done(function() {
+    location.reload();
+  })
 }
 </script>

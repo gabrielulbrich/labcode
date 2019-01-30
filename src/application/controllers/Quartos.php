@@ -63,7 +63,8 @@ class Quartos extends CI_Controller {
 		$quarto = $nomequarto;
 		if($this->Quartos_model->excluirQuarto($idquarto))
 		{
-			$this->session->set_flashdata('sucess', $quarto.' excluido');					
+			$this->session->set_flashdata('sucess', $quarto.' excluido');		
+			redirect('/quartos');			
 		}else{
 			$this->session->set_flashdata('error', 'Não foi possível excluir o quarto.');
 		}
