@@ -19,6 +19,11 @@ body {
   display: flex;
 }
 
+.icones{
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
 #wrapper #content-wrapper {
   overflow-x: hidden;
   width: 100%;
@@ -270,7 +275,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 @media (min-width: 1200px) {
   .card-columns {
     -webkit-column-count: 2;
-    column-count: 2;
+    column-count: auto;
   }
 }
 
@@ -373,3 +378,4 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+

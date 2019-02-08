@@ -25,17 +25,34 @@
 					<div class="col-md-12">
 						<?php //var_dump($_SESSION); ?>
 					</div>
-				</div><!-- .row -->
+				</div> .row -->
 			<!-- </div> -->
 		    <?php //endif; ?>
-            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Primary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+        <div class="card-columns">
+            <?php foreach($quartos as $q) { ?>
+            <div class="card border-dark mb-3" style="max-width: 18rem; margin: 0 10px 0 10px;">
+                <div class="card-header"><?php echo $q->nome; ?>
                 </div>
+                <div class="card-body text-dark">
+                    <p class="card-text" style="line-height: 1;">Disponível</p>
+                    <p class="card-text" style="font-size:10px; line-height: 0px;">08/02/2019 - 09/02/2018</p>
+                    <div style="background-color: #f2f2f2; padding: 3px;">
+                            <a class="icones" href="#">
+                                <i class="fas fa-money-bill-alt"></i>
+                            </a>
+                            <a class="icones" href="#"> 
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <a class="icones" href="#">
+                                <i class="fas fa-broom"></i>
+                            </a>
+                            <a class="icones" href="#">
+                                <i class="fas fa-check-circle"></i>
+                            </a>                            
+                    </div>
                 </div>
-
-
-
-
+            </div>
+            <?php } ?>
+        </div>

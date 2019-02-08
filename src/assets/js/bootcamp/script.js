@@ -93,6 +93,40 @@ initAnimacaoScroll();
 
 
 
+const transacoes = [
+  {
+    descricao: 'Taxa do pao',
+    valor: 'R$ 39',
+  },
+  {
+    descricao: 'Taxa do mercado',
+    valor: 'R$ 379',
+  },
+  {
+    descricao: 'Recebimento',
+    valor: 'R$ 79',
+  },
+  {
+    descricao: 'Taxa do banco',
+    valor: 'R$ 249',
+  },
+  {
+    descricao: 'adwadawdwa',
+    valor: 'R$ 259',
+  },
+  {
+    descricao: 'jhjjkkkkkkkko',
+    valor: 'R$ 29',
+  },
+]
+
+let taxaTotal = 0;
+
+transacoes.forEach((item) => {
+  console.log(item.descricao)
+})
+
+
 
 
 

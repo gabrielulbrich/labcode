@@ -20,13 +20,15 @@ class Welcome extends CI_Controller {
 	 */
     public function __construct() {
         parent::__construct ();
-        $this->load->library ('session');
+		$this->load->library ('session');
+		$this->load->model('Quartos_model');
     }
 
 	public function index()
 	{
 		$data['pagina'] = 'home/dashboard_view.php';
-
+		$data['quartos'] = $this->Quartos_model->selecionar();
+		
         if ($this->session->userdata ('logged_in') === true)
         {
             $this->load->view('index.php', $data);
@@ -35,45 +37,50 @@ class Welcome extends CI_Controller {
         }
 	}
 
-	public function alterarImg()
+	private function selectCards()
 	{
-		$nome							= $this->input->post('nome');
-		$config['upload_path']          = './uploads/';
-		$config['file_name']			= $nome.'.png';
-		$config['allowed_types']        = 'gif|jpg|png';
-		$config['max_size']             = 100;
-		$config['max_width']            = 1024;
-		$config['max_height']           = 768;
 
-		$this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload('foto'))
-		{
-			echo $this->upload->display_errors();
-		}
-		else
-		{
-			$this->session->set_flashdata('sucess', 'Imagem salva');
-			redirect('/Welcome');
-		}
 	}
 
-	public function uploadImg()
-    {
-        if ($_FILES['file']['name']) {
-            if (!$_FILES['file']['error']) {
-                $name = md5(rand(100, 200));
-                $ext = explode('.', $_FILES['file']['name']);
-                $filename = $name . '.' . $ext[1];
-                $destination = FCPATH.'assets/uploads/' . $filename; //change this directory
-                $location = $_FILES["file"]["tmp_name"];
-                move_uploaded_file($location, $destination);
-                echo base_url().'/assets/uploads/' . $filename;//change this URL
-            }
-            else
-            {
-                echo  $message = 'Ooops!  Your upload triggered the following error:  '.$_FILES['file']['error'];
-            }
-        }
-    }
+	// public function alterarImg()
+	// {
+	// 	$nome							= $this->input->post('nome');
+	// 	$config['upload_path']          = './uploads/';
+	// 	$config['file_name']			= $nome.'.png';
+	// 	$config['allowed_types']        = 'gif|jpg|png';
+	// 	$config['max_size']             = 100;
+	// 	$config['max_width']            = 1024;
+	// 	$config['max_height']           = 768;
+
+	// 	$this->load->library('upload', $config);
+
+	// 	if (!$this->upload->do_upload('foto'))
+	// 	{
+	// 		echo $this->upload->display_errors();
+	// 	}
+	// 	else
+	// 	{
+	// 		$this->session->set_flashdata('sucess', 'Imagem salva');
+	// 		redirect('/Welcome');
+	// 	}
+	// }
+
+	// public function uploadImg()
+    // {
+    //     if ($_FILES['file']['name']) {
+    //         if (!$_FILES['file']['error']) {
+    //             $name = md5(rand(100, 200));
+    //             $ext = explode('.', $_FILES['file']['name']);
+    //             $filename = $name . '.' . $ext[1];
+    //             $destination = FCPATH.'assets/uploads/' . $filename; //change this directory
+    //             $location = $_FILES["file"]["tmp_name"];
+    //             move_uploaded_file($location, $destination);
+    //             echo base_url().'/assets/uploads/' . $filename;//change this URL
+    //         }
+    //         else
+    //         {
+    //             echo  $message = 'Ooops!  Your upload triggered the following error:  '.$_FILES['file']['error'];
+    //         }
+    //     }
+    // }
 }
