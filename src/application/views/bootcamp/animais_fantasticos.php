@@ -12,7 +12,7 @@
   </script>
 </head>
 <body>
-  <nav class="menu js-menu">
+  <nav class="menu" data-menu="suave">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
@@ -20,9 +20,9 @@
       <li><a href="https://www.origamid.com/">Dev →</a></li>
     </ul>
   </nav>
-  <section class="grid-section animais js-scroll" id="animais">
+  <section class="grid-section animais" data-anime="scroll" id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista js-tabmenu">
+    <ul class="animais-lista" data-tab="menu">
       <li>
         <img src="assets/img/imagem1.jpg">
       </li>
@@ -42,8 +42,8 @@
         <img src="assets/img/imagem6.jpg">
       </li>
     </ul>
-    <div class="animais-descricao js-tabcontent">
-      <section>
+    <div class="animais-descricao" data-tab="content">
+      <section data-anime="show-right">
         <h2>Raposa</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
           por um focinho comprido e uma cauda longa e peluda.</p>
@@ -53,7 +53,7 @@
         <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </section>
       
-      <section>
+      <section data-anime="show-right">
         <h2>Esquilo</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
           por um focinho comprido e uma cauda longa e peluda.</p>
@@ -62,7 +62,7 @@
           qual a raposa vermelha é a mais comum.</p>
         <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </section>
-      <section>
+      <section data-anime="show-down">
         <h2>Urso</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
           por um focinho comprido e uma cauda longa e peluda.</p>
@@ -71,7 +71,7 @@
           qual a raposa vermelha é a mais comum.</p>
         <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </section>
-      <section>
+      <section data-anime="show-right">
         <h2>Lobo</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
           por um focinho comprido e uma cauda longa e peluda.</p>
@@ -80,7 +80,7 @@
           qual a raposa vermelha é a mais comum.</p>
         <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </section>
-      <section>
+      <section data-anime="show-down">
         <h2>Macaco</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
           por um focinho comprido e uma cauda longa e peluda.</p>
@@ -89,7 +89,7 @@
           qual a raposa vermelha é a mais comum.</p>
         <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </section>
-      <section>
+      <section data-anime="show-down">
         <h2>Leão</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
           por um focinho comprido e uma cauda longa e peluda.</p>
@@ -101,9 +101,9 @@
     </div>
   </section>
 
-  <section class="grid-section faq js-scroll" id="faq">
+  <section class="grid-section faq" data-anime="scroll" id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista js-accordion">
+    <dl class="faq-lista" data-anime="accordion">
       <dt>Qual a idade dos animais?</dt>
       <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
       <dt>Eles são fantásticos?</dt>
@@ -115,7 +115,7 @@
     </dl>
   </section>
 
-  <section class="grid-section contato js-scroll" id="contato">
+  <section class="grid-section contato" data-anime="scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="assets/img/mapa.png">
@@ -131,7 +131,21 @@
   <footer class="copy">
     <p>Todos os direitos reservados.</p>
   </footer>
+  
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button data-modal="fechar" class="fechar"></button>
+      <form action="">
+        <label for="email">Email</label>
+        <input type="text" for="email" id="email">
+        <label for="senha">Smail</label>
+        <input type="password" for="senha" id="senha">
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
 
-  <script src="assets/js/bootcamp/script.js"></script>  
+  </section>
+
+  <script type="module" src="assets/js/bootcamp/script.js"></script>
 </body>
 </html>
