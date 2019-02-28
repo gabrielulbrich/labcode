@@ -12,12 +12,22 @@
   </script>
 </head>
 <body>
+<div class="grid-container">
   <nav class="menu" data-menu="suave">
     <ul>
       <li><a href="#animais">Animais</a></li>
+      <li data-dropdown>
+        <a href="sobre.html"></a>
+        <ul class="dropdown-menu">
+          <li><a href="empresa.html">A Empresa</a></li>
+          <li><a href="empresa.html">Equipe</a></li>
+          <li><a href="empresa.html">Sócios</a></li>
+          <li><a href="empresa.html">Investidores</a></li>
+        </ul>
+      </li>
       <li><a href="#faq">Faq</a></li>
       <li><a href="#contato">Contato</a></li>
-      <li><a href="https://www.origamid.com/">Dev →</a></li>
+      <li><a data-modal="abrir" href="login.html">Login →</a></li>
     </ul>
   </nav>
   <section class="grid-section animais" data-anime="scroll" id="animais">
@@ -117,7 +127,7 @@
 
   <section class="grid-section contato" data-anime="scroll" id="contato">
     <h1 class="titulo">Contato</h1>
-    <div class="mapa">
+    <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
       <img src="assets/img/mapa.png">
     </div>
     <ul class="dados">
@@ -131,10 +141,11 @@
   <footer class="copy">
     <p>Todos os direitos reservados.</p>
   </footer>
+  </div>
   
   <section class="modal-container" data-modal="container">
     <div class="modal">
-      <button data-modal="fechar" class="fechar"></button>
+      <button data-modal="fechar" class="fechar">X</button>
       <form action="">
         <label for="email">Email</label>
         <input type="text" for="email" id="email">
@@ -143,7 +154,6 @@
         <button type="submit">Entrar</button>
       </form>
     </div>
-
   </section>
 
   <script type="module" src="assets/js/bootcamp/script.js"></script>
