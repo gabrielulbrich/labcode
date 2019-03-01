@@ -55,11 +55,13 @@ $route['cliente/lista'] = 'CadastroCliente/listagem';
 $route['form/lista'] = 'Form/listagem';
 $route['form/cadastro'] = 'Form/cadastro';
 $route['quartos'] = 'Quartos/index';
-$route['animais-fantasticos'] = 'AnimaisFantasticos/index';
 $route['perfil'] = 'User/perfil';
 $route['register'] = 'user/register';
 $route['login'] = 'user/login';
 $route['logout'] = 'user/logout';
+
+$route['bootcamp/animais-fantasticos'] = 'Bootcamp/animaisFantasticos';
+$route['bootcamp/botao-dinamico'] = 'Bootcamp/botaoDinamico';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

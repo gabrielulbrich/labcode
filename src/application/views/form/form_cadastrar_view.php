@@ -43,7 +43,7 @@
 
                     <div class="form-group">
                         <label for="text">SENHA</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" name="senha" value="" style="width: 500px;">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="senha" value="" style="width: 500px;" required>
                     </div>
 
                     <div class="form-group">

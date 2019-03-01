@@ -6,7 +6,7 @@
  * Time: 3:56 PM
  */
 
-class AnimaisFantasticos extends CI_Controller
+class Bootcamp extends CI_Controller
 {
     public function __construct() {
         parent::__construct ();
@@ -15,7 +15,25 @@ class AnimaisFantasticos extends CI_Controller
         //$this->load->model('cadastrocliente_model');
     }
 
-    public function index()
+    public function botaoDinamico()
+    {
+        if ($this->session->userdata ('logged_in') === true)
+        {
+            //$this->load->view('header/header');
+            //$this->load->view('index');
+            $this->load->view('bootcamp/botao_dinamico');
+            //$this->load->view('header/footer');
+        }else{
+            redirect('/login');
+        }
+
+    }
+
+    public function api(){
+        die('teste');
+    }
+
+    public function animaisFantasticos()
     {
         if ($this->session->userdata ('logged_in') === true)
         {

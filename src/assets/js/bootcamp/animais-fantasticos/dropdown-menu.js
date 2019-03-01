@@ -1,4 +1,4 @@
-import outsideClick from './outsideclick';
+import outsideClick from './outsideclick.js';
 
 
 

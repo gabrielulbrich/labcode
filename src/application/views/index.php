@@ -105,7 +105,8 @@
             <span>Java Script</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="/animais-fantasticos">Animais Fantasticos</a>
+            <a class="dropdown-item" href="/bootcamp/animais-fantasticos">Animais Fantasticos</a>
+            <a class="dropdown-item" href="/bootcamp/botao-dinamico">Botão dinamico</a>
           </div>
         </li>
         <li class="nav-item dropdown">

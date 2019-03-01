@@ -6,7 +6,7 @@
   <title>Animais Fantásticos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/css/bootcamp/style.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootcamp/style.css" />
   <script>
     document.documentElement.className += ' js';
   </script>
@@ -14,10 +14,11 @@
 <body>
 <div class="grid-container">
   <nav class="menu" data-menu="suave">
-    <ul>
+  <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul data-menu="list" id="menu">
       <li><a href="#animais">Animais</a></li>
       <li data-dropdown>
-        <a href="sobre.html"></a>
+        <a href="sobre.html">Sobre</a>
         <ul class="dropdown-menu">
           <li><a href="empresa.html">A Empresa</a></li>
           <li><a href="empresa.html">Equipe</a></li>
@@ -34,22 +35,22 @@
     <h1 class="titulo">Animais Fantásticos</h1>
     <ul class="animais-lista" data-tab="menu">
       <li>
-        <img src="assets/img/imagem1.jpg">
+        <img src=".././assets/img/imagem1.jpg">
       </li>
       <li>
-        <img src="assets/img/imagem2.jpg">
+        <img src=".././assets/img/imagem2.jpg">
       </li>
       <li>
-        <img src="assets/img/imagem3.jpg">
+        <img src=".././assets/img/imagem3.jpg">
       </li>
       <li>
-        <img src="assets/img/imagem4.jpg">
+        <img src=".././assets/img/imagem4.jpg">
       </li>
       <li>
-        <img src="assets/img/imagem5.jpg">
+        <img src=".././assets/img/imagem5.jpg">
       </li>
       <li>
-        <img src="assets/img/imagem6.jpg">
+        <img src=".././assets/img/imagem6.jpg">
       </li>
     </ul>
     <div class="animais-descricao" data-tab="content">
@@ -125,16 +126,39 @@
     </dl>
   </section>
 
+  <section class="grid-section numeros" data-anime="scroll">
+    <h1 class="titulo">Números</h1>
+    <div class="numeros-grid">
+      <div class="numero-animal">
+        <h3>Lobos</h3>
+        <span data-numero>487</span>
+      </div>
+      <div class="numero-animal">
+        <h3>Raposas</h3>
+        <span data-numero>273</span>
+      </div>
+      <div class="numero-animal">
+        <h3>Esquilos</h3>
+        <span data-numero>123123</span>
+      </div>
+      <div class="numero-animal">
+        <h3>Ursos</h3>
+        <span data-numero>1000</span>
+      </div>
+    </div>
+  </section>
+
   <section class="grid-section contato" data-anime="scroll" id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
-      <img src="assets/img/mapa.png">
+      <img src=".././assets/img/mapa.png">
     </div>
     <ul class="dados">
       <li>contato@origamid.com</li>
       <li>+55 (21) 9999-9999</li>
       <li>Rua do Conde, nº 21</li>
       <li>Rio de Janeiro - RJ</li>
+      <li data-semana="1,2,3,4,5" data-horario="8,18">Seg à Sex das 8 às 18</li>
     </ul>
   </section>
 
@@ -156,6 +180,6 @@
     </div>
   </section>
 
-  <script type="module" src="assets/js/bootcamp/script.js"></script>
+  <script type="module" src="<?php echo base_url();?>assets/js/bootcamp/animais-fantasticos/script.js"></script>
 </body>
 </html>
