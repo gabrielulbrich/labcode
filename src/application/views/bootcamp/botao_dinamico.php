@@ -41,6 +41,10 @@
     </pre>
   </section>
 </section>
+<script>
+const btn = document.querySelector('.btn');
+</script>
+  <script src="<?php echo base_url(); ?>vendor/jquery/jquery.min.js"></script>
   <script type="module" src="<?php echo base_url();?>assets/js/bootcamp/botao-dinamico/botao-dinamico.js"></script>
 </body>
 </html>
